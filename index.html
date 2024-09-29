@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Flip Card Game</title>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Memory Flip Card Game</h1>
+        <div id="mode-selection">
+            <button id="normal-mode">Normal Mode</button>
+            <button id="fast-mode">Fast-Paced Mode</button>
+        </div>
+        <div id="game-board" style="display: none;">
+            <div id="timer" style="display: none;">Time Left: <span id="time-left"></span>s</div>
+            <div id="cards-container"></div>
+            <div id="status"></div>
+            <button id="reset-button" style="display: none;">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

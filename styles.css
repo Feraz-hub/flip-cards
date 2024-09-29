@@ -1,0 +1,144 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#mode-selection {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+    transform: scale(1.05);
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust to fit 7 pairs */
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px; /* Limit the max width */
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(255, 255, 0, 0.7); /* Neon border */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.card-back {
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    border: 3px solid rgba(0, 0, 255, 0.7); /* Neon border */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+/* Add glow effect to images when flipped */
+.card-back img {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
+}
+
+/* styles.css */
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+}
+
+.modal button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.modal button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+    transform: scale(1.05);
+}
